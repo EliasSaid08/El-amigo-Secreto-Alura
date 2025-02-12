@@ -19,6 +19,5 @@
 
 ## Cómo usar 🛠️
 
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
+1. **Puedes ver el repositorio**:
+  https://github.com/EliasSaid08/El-amigo-Secreto-Alura.git
