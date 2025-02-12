@@ -1,14 +1,14 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-// Función para validar el nombre
+// Valido el nombre del amigo
 function validarNombre(nombre) {
-    // Validar que el campo no esté vacío
+    // Que no haya campo vacío
     if (nombre === "") {
         alert("Por favor, escribe un nombre válido.");
         return false;
     }
 
-    // Validar longitud del nombre
+    // Longitud del nombre
     if (nombre.length > 30) {
         alert("El nombre no puede tener más de 30 caracteres.");
         return false;
@@ -19,14 +19,14 @@ function validarNombre(nombre) {
         return false;
     }
 
-    // Validar que no contenga caracteres especiales (solo letras y espacios)
+    // Excluir caracteres especiales y números
     const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
     if (!regex.test(nombre)) {
         alert("El nombre no puede contener caracteres especiales o números.");
         return false;
     }
 
-    // Validar que el nombre no esté duplicado
+    // Evitar duplicados
     const listaAmigos = document.getElementById('listaAmigos').children;
     for (let amigo of listaAmigos) {
         if (amigo.textContent.toLowerCase() === nombre.toLowerCase()) {
@@ -38,14 +38,14 @@ function validarNombre(nombre) {
     return true; // Si pasa todas las validaciones
 }
 
-// Función para agregar un amigo a la lista
+// Esta funcion agrega un amigo a la lista
 function agregarAmigo() {
     const input = document.getElementById('amigo');
     const nombre = input.value.trim();
 
-    // Validar el nombre antes de agregarlo
+    // Aca realiza la validacion del nombre
     if (!validarNombre(nombre)) {
-        return; // Si la validación falla, no se agrega el nombre
+        return; 
     }
 
     // Obtener la lista de amigos y crear un nuevo elemento de lista
